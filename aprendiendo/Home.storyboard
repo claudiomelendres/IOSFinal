@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="enb-50-ViR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Conferences-->
+        <scene sceneID="lbi-fl-ypp">
+            <objects>
+                <viewController id="uCO-cA-ynR" customClass="HomeViewController" customModule="finalWork" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lm2-mB-UqI">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Disney1" translatesAutoresizingMaskIntoConstraints="NO" id="T6T-c3-pLz">
+                                <rect key="frame" x="30" y="108" width="354" height="224"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Conferencias Hoy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PAf-fU-eyR">
+                                <rect key="frame" x="149" y="352" width="136" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MWn-fV-SBg">
+                                <rect key="frame" x="5" y="393" width="404" height="449"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="FFd-Xd-b3M" firstAttribute="trailing" secondItem="MWn-fV-SBg" secondAttribute="trailing" constant="5" id="2t5-gp-rbT"/>
+                            <constraint firstItem="MWn-fV-SBg" firstAttribute="leading" secondItem="FFd-Xd-b3M" secondAttribute="leading" constant="5" id="2v9-yg-Ovs"/>
+                            <constraint firstItem="FFd-Xd-b3M" firstAttribute="trailing" secondItem="T6T-c3-pLz" secondAttribute="trailing" constant="30" id="5dr-gZ-bRi"/>
+                            <constraint firstItem="T6T-c3-pLz" firstAttribute="leading" secondItem="FFd-Xd-b3M" secondAttribute="leading" constant="30" id="9ue-UM-NQn"/>
+                            <constraint firstItem="FFd-Xd-b3M" firstAttribute="bottom" secondItem="MWn-fV-SBg" secondAttribute="bottom" constant="20" id="OnQ-ky-eTQ"/>
+                            <constraint firstItem="T6T-c3-pLz" firstAttribute="top" secondItem="FFd-Xd-b3M" secondAttribute="top" constant="20" id="Ovk-EP-CiM"/>
+                            <constraint firstItem="MWn-fV-SBg" firstAttribute="top" secondItem="PAf-fU-eyR" secondAttribute="bottom" constant="20" id="roO-w4-2vy"/>
+                            <constraint firstItem="PAf-fU-eyR" firstAttribute="top" secondItem="T6T-c3-pLz" secondAttribute="bottom" constant="20" id="y1P-0V-Hre"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FFd-Xd-b3M"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home Conferences" id="hfW-Wj-ueb"/>
+                    <connections>
+                        <outlet property="tableView" destination="MWn-fV-SBg" id="dDI-pS-uQz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zps-Uc-C3B" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="768.11594202898561" y="41.517857142857139"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qtN-dk-0oR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="enb-50-ViR" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9NL-sw-tPi">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="uCO-cA-ynR" kind="relationship" relationship="rootViewController" id="Qij-e2-fJC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vTo-Lv-IMJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-142.02898550724638" y="41.517857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Disney1" width="319.5" height="224"/>
+    </resources>
+</document>
